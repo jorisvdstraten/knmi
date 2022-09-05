@@ -42,13 +42,6 @@ if len(selection) > 0:
     df["Lo"] = df["Lo"] / 10
     df["Hi"] = df["Hi"] / 10
 
-    fig = px.bar(df, x='Date', y='Hi')
+    fig = px.bar(df, x='Date', y='Hi', color='Stn')
 
     st.plotly_chart(fig, use_container_width=True)
-
-    # chart = alt.Chart(df).mark_bar(opacity=0.7).encode(
-    #     x='Date',
-    #     y=alt.Y('Hi', stack=None),
-    #     color='Stn')
-
-    # st.altair_chart(chart, use_container_width=True)
