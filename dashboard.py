@@ -31,7 +31,7 @@ if len(selection) > 0:
     df = pd.read_csv(post_url, delimiter=',', comment='#',
                      header=None, names=['Stn', 'Date', 'Lo', 'Hi'])
 
-    df['Date'] = pd.to_datetime(df['Date'], format="%Y%M%d")
+    df['Date'] = pd.to_datetime(df['Date'], format="%Y%m%d")
     df.drop(df.index[df['Lo'] == '     '], inplace=True)
     df.drop(df.index[df['Hi'] == '     '], inplace=True)
 
